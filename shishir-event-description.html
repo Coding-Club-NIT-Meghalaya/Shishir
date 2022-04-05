@@ -27,7 +27,7 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="dark-scheme">
+<body class="dark-scheme" onload="onLoadDescription()">
     <div id="wrapper">
         <div id="preloader">
             <div class="preloader1"></div>
@@ -293,6 +293,13 @@
     <script src="js/jquery.smartsticky.min.js"></script>
     <script src="js/designesia.js"></script>
 
+    <script>
+        function onLoadDescription(){
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString)
+            console.log(urlParams.get('name'));
+        }
+    </script>
 
 </body>
 
